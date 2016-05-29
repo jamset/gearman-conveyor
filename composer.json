@@ -1,0 +1,26 @@
+{
+  "name": "jamset/gearman-conveyor",
+  "description": "Gearman (gearman.org) based module allowing to handle tasks with process management and tasks inspector module",
+  "require": {
+    "php": ">=5.5.9",
+    "monolog/monolog": "^1.19",
+    "jamset/process-load-manager": "dev",
+    "jamset/publisher-pulsar": "dev",
+    "jamset/php-adjutants": "dev",
+    "jamset/client_basic": "dev",
+    "jamset/tasks-inspector": "dev"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Jam Set",
+      "email": "jamset@joinger.org"
+    }
+  ],
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "Gearman\\Conveyor\\": "src/"
+    }
+  }
+}
