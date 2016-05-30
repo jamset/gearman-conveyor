@@ -87,4 +87,6 @@ about task's execution status and re-init tasks if needed, log or send informati
  
 ##Schema
 
+On the schema Gearman Conveyor module presents with [PublisherPulsar](https://github.com/jamset/publisher-pulsar) module
+
 ![Gearman conveyor](https://github.com/jamset/gearman-conveyor/raw/master/images/gearman-conveyor.jpg)
