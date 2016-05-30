@@ -8,11 +8,7 @@
 namespace Gearman\Conveyor\Clients\Abstracts;
 
 use App\FWIndependent\Clients\Abstracts\BaseClient;
-use Gearman\Conveyor\Clients\Inventory\ClientConstants;
-use TasksInspector\Inspector;
 use TasksInspector\Inventory\ExecutionDto;
-use Gearman\Conveyor\Inventory\GearmanErrorsConstants;
-use Monolog\Logger;
 
 abstract class BaseGearmanClient extends BaseClient
 {

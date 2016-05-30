@@ -7,9 +7,6 @@
  */
 namespace Gearman\Conveyor\Inventory;
 
-use React\ProcessManager\LoadManager\Inventory\LoadManagerDto;
-use React\PublisherPulsar\Inventory\PublisherPulsarDto;
-
 class GearmanDto
 {
     /**

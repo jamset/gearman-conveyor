@@ -4,11 +4,12 @@
   "require": {
     "php": ">=5.5.9",
     "monolog/monolog": "^1.19",
-    "jamset/process-load-manager": "dev",
-    "jamset/publisher-pulsar": "dev",
-    "jamset/php-adjutants": "dev",
-    "jamset/client_basic": "dev",
-    "jamset/tasks-inspector": "dev"
+    "jamset/process-load-manager": "dev-master",
+    "jamset/publisher-pulsar": "dev-master",
+    "jamset/php-adjutants": "dev-master",
+    "jamset/client_basic": "dev-master",
+    "jamset/tasks-inspector": "dev-master",
+    "jamset/commands-executor": "dev-master"
   },
   "license": "MIT",
   "authors": [

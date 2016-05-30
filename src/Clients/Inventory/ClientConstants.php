@@ -10,7 +10,6 @@ namespace Gearman\Conveyor\Clients\Inventory;
 class ClientConstants
 {
     const REPEATEDLY = 'repeatedly';
-
     const MAX_RECURSION_CALL_TASKS = 2;
 
 }

@@ -7,7 +7,7 @@
  */
 namespace Gearman\Conveyor\Workers;
 
-use App\FWIndependent\Adjutant\Processes\Interfaces\SignalsExecutor;
+use AdjutantHandlers\Processes\Interfaces\SignalsExecutor;
 use Gearman\Conveyor\ProcessManager\ProcessManagerInitializer;
 use Gearman\Conveyor\Workers\Abstracts\BaseCommonWorker;
 

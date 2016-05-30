@@ -9,7 +9,6 @@ namespace Gearman\Conveyor\ProcessManager;
 
 use Gearman\Conveyor\ProcessManager\Interfaces\ProcessManagement;
 use Gearman\Conveyor\Inventory\GearmanDto;
-use Gearman\Conveyor\Inventory\GearmanParamsConstants;
 use Monolog\Logger;
 
 class ProcessManagerInitializer

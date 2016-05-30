@@ -7,17 +7,12 @@
  */
 namespace Gearman\Conveyor\ProcessManager;
 
-use App\Console\Inventory\ConsoleConstants;
 use Gearman\Conveyor\ProcessManager\Abstracts\BaseProcessManager;
-use React\ProcessManager\LoadManager\Inventory\LoadManagerDto;
-use React\ProcessManager\Inventory\ProcessManagerDto;
 use React\ProcessManager\Pm as Manager;
-use TasksInspector\Inventory\ExecutionDto;
 use Gearman\Conveyor\Inventory\GearmanDto;
 
 class ReactProcessManager extends BaseProcessManager
 {
-
     /**
      * @var \GearmanJob
      */
@@ -32,8 +27,11 @@ class ReactProcessManager extends BaseProcessManager
     {
         $this->manager = new Manager();
         $this->manager->setProcessManagerDto($this->gearmanDto->getProcessManagerDto());
-        $this->manager->setSigTermBlockingAgent(true); //Gearman worker block any signal besides SIGKILL,
-        // so its become impossible to correct send SIGTERM.
+
+        //Gearman worker block any signal besides SIGKILL,
+        //so its become impossible to correct send SIGTERM and handle it (execute some other actions before termination)
+        $this->manager->setSigTermBlockingAgent(true);
+
         $this->manager->manage();
 
         $this->manager->getExecutionDto()->setExecutionMessage("PM with id " . $this->gearmanDto->getTaskId() . " going to finish.");
