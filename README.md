@@ -1,5 +1,5 @@
 # Gearman conveyor
-Gearman (gearman.org) based module allowing to handle tasks with process management and tasks inspector module
+Gearman (gearman.org) based module of distributed execution and control tasks allowing to handle tasks in assistence with [Process&Load Management](https://github.com/jamset/process-load-manager)(Pm&Lm) and [Tasks inspector](https://github.com/jamset/tasks-inspector) module.
 
 ##Install
 
@@ -10,41 +10,42 @@ Gearman (gearman.org) based module allowing to handle tasks with process managem
 The architecture can be divided into three parts:
 
 1) Client/clients
+
 2) Gearman server
+
 3) Workers
 
-The client part consists of:
+####The client part consists of:
 1) Console command that starts client by CRON and that contain class extended BaseGearmanCLient. 
-And where is set parameters of Pm&Lm, worker's command name.
+Where parameters of Pm&Lm and worker's command name are set.
 
-Server part:
+####Server part:
 1) gearmand (Gearman job server)
 [Read how to install needed libs here](href)
 
-Workers side:
+####Workers side:
 
 1) Worker-manager. Worker that contains the process Manager (Pm&Lm) that performs task with addTaskHigh() level
 http://php.net/manual/en/gearmanclient.addtaskhigh.php
 
-2) Worker-performer. Worker, containing Service performing the final (goal) work with normal or low level, addTask() and addTaskLow()
+2) Worker-performer. Worker containing Service performing the final (goal) work with normal or low level [handling tasks added to server by addTask() or addTaskLow() commands]
 http://php.net/manual/en/gearmanclient.addtask.php 
 http://php.net/manual/en/gearmanclient.addtasklow.php
 
 ####Main logic (abstract)
 
-CRON initializes the client. Then in the client initializes the DTO, which set in the client tasks as tasks that 
+CRON launch the client. Then in the client initializes the DTO, which set in the client tasks as tasks that 
 must be accepted by the Service (worker-performer) for the final run. 
 
 After all tasks for a service is set initializes parameters of the Pm&Lm and DTO, that is passed to Gearman Server 
 as the task with high level (which means that it will be executed before all others with a lower priority level)
 
-Then there is a ->runTasks() which puts the client in the standby mode (to listen callbacks, with errors or just with execution state/info)
+Then there is a ->runTasks() which puts the client in the standby mode (to listen callbacks, with errors or just with execution state info)
 
-So, tasks are initialized and translated to Gearman Server (where they become jobs for workers).
+So, tasks are initialized and transfered to Gearman Server (where they become jobs for workers).
 
 After that (periodically) CRON runs the console command of worker-manager. I.e. 
-[Pm&Lm](https://github.com/jamset/process-load-manager) manager or other (Note: if worker-manager doesn't receive any task for it
-from Gearman Server it terminates).
+[Pm&Lm](https://github.com/jamset/process-load-manager) manager or other (Note: if worker-manager doesn't receive any task for it from Gearman Server it terminates).
 
 The Gearman Server passes that Pm&Lm script task, containing DTO for Pm&Lm.
  
@@ -84,7 +85,7 @@ multiple tasks (i.e. for long-term execution of complex work) you have to use PA
 - It allows to choose process management system and use Gearman callbacks to handle messages containing information
 about task's execution status and re-init tasks if needed, log or send information about execution by 
 [TasksInspector](https://github.com/jamset/tasks-inspector) module
- 
+
 ##Schema
 
 On the schema Gearman Conveyor module presents with [PublisherPulsar](https://github.com/jamset/publisher-pulsar) module
