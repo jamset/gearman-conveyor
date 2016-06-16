@@ -7,6 +7,8 @@ with help of [Process&Load Management](https://github.com/jamset/process-load-ma
 
 `composer require jamset/german-conveyor`
 
+Note: not tested on PHP7
+
 ##Description
 
 The architecture can be divided into three parts:
