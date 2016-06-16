@@ -1,7 +1,7 @@
 # Gearman conveyor
 Gearman (gearman.org) based module of distributed execution and control tasks allowing to handle tasks 
-with help of [Process&Load Management](https://github.com/jamset/process-load-manager)(Pm&Lm) and 
-[Tasks inspector](https://github.com/jamset/tasks-inspector) module.
+with help of [Process&Load Management](https://github.com/jamset/process-load-manager) (Pm&Lm) and 
+[Tasks inspector](https://github.com/jamset/tasks-inspector) modules.
 
 ##Install
 

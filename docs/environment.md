@@ -2,29 +2,6 @@
 
 sudo apt-get install php-pear php5-dev
 
-### Libsodium 
-
-http://doc.libsodium.org/installation/index.html 
-https://download.libsodium.org/libsodium/releases/
-
-wget https://download.libsodium.org/libsodium/releases/libsodium-1.0.3.tar.gz
-
-tar -xzvf libsodium-1.0.3.tar.gz && cd libsodium-1.0.3
-
-./configure
-
-sudo make && sudo make install
-
-### Libevent
-
-sudo apt-get install libevent-dev
-
-### Libevent.so
-
-sudo pecl install channel://pecl.php.net/libevent-0.1.0
-
-!You should add "extension=libevent.so" to php.ini
-
 ### Gearman
 
 In Ubuntu 14.04, python-software-properties were replaced by software-properties-common. 
@@ -48,7 +25,31 @@ sudo pecl install gearman
 
 !You should add "extension=gearman.so" to php.ini
 
-## Optional (for Process&Load Management or Publisher Pulsar module)
+## Optional 
+(for Process&Load Management or Publisher Pulsar modules)
+
+### Libevent
+
+sudo apt-get install libevent-dev
+
+### Libevent.so
+
+sudo pecl install channel://pecl.php.net/libevent-0.1.0
+
+!You should add "extension=libevent.so" to php.ini
+
+### Libsodium 
+
+http://doc.libsodium.org/installation/index.html 
+https://download.libsodium.org/libsodium/releases/
+
+wget https://download.libsodium.org/libsodium/releases/libsodium-1.0.3.tar.gz
+
+tar -xzvf libsodium-1.0.3.tar.gz && cd libsodium-1.0.3
+
+./configure
+
+sudo make && sudo make install
 
 ### ZMQ
 
@@ -65,6 +66,9 @@ sudo make && sudo make install
 sudo pecl install zmq-beta
 
 !You should add "extension=zmq.so" to php.ini
+
+
+
 
 
 

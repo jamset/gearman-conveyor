@@ -1,6 +1,6 @@
 {
   "name": "jamset/gearman-conveyor",
-  "description": "Gearman (gearman.org) based module allowing to handle tasks with process management and tasks inspector module",
+  "description": "Gearman (gearman.org) based module of distributed execution and control tasks allowing to handle tasks with help of Process&Load Management and Tasks inspector modules.",
   "require": {
     "php": ">=5.5.9",
     "monolog/monolog": "^1.19",
