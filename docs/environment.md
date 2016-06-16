@@ -20,7 +20,7 @@ sudo apt-get install gearman-job-server libgearman-dev
 
 sudo apt-get upgrade
 
-Step 3: Install PECL & Use It to Install Gearman (CLI, Client, Worker)
+Step 3: Install Gearman (CLI, Client, Worker)
 
 sudo pecl install gearman
 
