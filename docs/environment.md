@@ -2,7 +2,10 @@
 
 sudo apt-get install php-pear php5-dev
 
-### Libsodium: http://doc.libsodium.org/installation/index.html https://download.libsodium.org/libsodium/releases/
+### Libsodium 
+
+http://doc.libsodium.org/installation/index.html 
+https://download.libsodium.org/libsodium/releases/
 
 wget https://download.libsodium.org/libsodium/releases/libsodium-1.0.3.tar.gz
 
@@ -24,7 +27,22 @@ sudo pecl install channel://pecl.php.net/libevent-0.1.0
 
 ### Gearman
 
+In Ubuntu 14.04, python-software-properties were replaced by software-properties-common. 
+Step 1: add PPA
+
+sudo apt-get install software-properties-common
+
+sudo add-apt-repository ppa:gearman-developers/ppa
+
+sudo apt-get update
+
+Step 2: Install the Gearman Job Server & Dev Tools, & Perform Upgrade
+
 sudo apt-get install gearman-job-server libgearman-dev
+
+sudo apt-get upgrade
+
+Step 3: Install PECL & Use It to Install Gearman (CLI, Client, Worker)
 
 sudo pecl install gearman
 
@@ -48,20 +66,5 @@ sudo pecl install zmq-beta
 
 !You should add "extension=zmq.so" to php.ini
 
-In Ubuntu 14.04, python-software-properties were replaced by software-properties-common. We will go ahead and install this along with a useful Gearman PPA.
 
-sudo apt-get install software-properties-common
 
-sudo add-apt-repository ppa:gearman-developers/ppa
-
-sudo apt-get update
-
-Step 2: Install the Gearman Job Server & Dev Tools, & Perform Upgrade
-
-sudo apt-get install gearman-job-server libgearman-dev
-
-sudo apt-get upgrade
-
-Step 3: Install PECL & Use It to Install Gearman (CLI, Client, Worker)
-
-sudo pecl install gearman
