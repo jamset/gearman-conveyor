@@ -23,7 +23,7 @@ Where parameters of Pm&Lm and worker's command name are set.
 
 ####Server part:
 1) gearmand (Gearman job server)
-[Read how to install needed libs here](href)
+[Read how to install needed libs here](https://github.com/jamset/gearman-conveyor/blob/master/docs/environment.md)
 
 ####Workers side:
 
