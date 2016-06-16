@@ -5,6 +5,7 @@ sudo apt-get install php-pear php5-dev
 ### Gearman
 
 In Ubuntu 14.04, python-software-properties were replaced by software-properties-common. 
+
 Step 1: add PPA
 
 sudo apt-get install software-properties-common
