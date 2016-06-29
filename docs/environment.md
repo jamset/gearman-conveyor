@@ -1,6 +1,6 @@
 ### Install PECL
 
-sudo apt-get install php-pear php5-dev
+sudo apt-get install php-pear php5-dev (PHP7: php-dev) 
 
 ### Gearman
 
@@ -33,7 +33,7 @@ sudo pecl install gearman
 
 sudo apt-get install libevent-dev
 
-### Libevent.so
+### Libevent.so (PHP7: not needed - not compatible)
 
 sudo pecl install channel://pecl.php.net/libevent-0.1.0
 
