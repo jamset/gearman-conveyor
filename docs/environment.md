@@ -11,16 +11,12 @@ In Ubuntu 14.04, python-software-properties were replaced by software-properties
 Step 1: add PPA
 
 ```bash
-sudo apt-get install software-properties-common
-
-sudo add-apt-repository ppa:gearman-developers/ppa
-
-sudo apt-get update
+sudo apt-get install gearman
 ```
 Step 2: Install the Gearman Job Server & Dev Tools, & Perform Upgrade
 
 ```bash
-sudo apt-get install gearman-job-server libgearman-dev
+sudo apt-get install libgearman-dev
 
 sudo apt-get upgrade
 ```
