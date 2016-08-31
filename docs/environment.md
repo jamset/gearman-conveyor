@@ -6,16 +6,9 @@ sudo apt-get install php-pear php5-dev (PHP7: php-dev)
 
 ### Gearman
 
-In Ubuntu 14.04, python-software-properties were replaced by software-properties-common. 
-
-Step 1: add PPA
-
 ```bash
 sudo apt-get install gearman
-```
-Step 2: Install the Gearman Job Server & Dev Tools, & Perform Upgrade
 
-```bash
 sudo apt-get install libgearman-dev
 
 sudo apt-get upgrade
