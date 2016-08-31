@@ -19,9 +19,7 @@ Step 2: Install the Gearman Job Server & Dev Tools, & Perform Upgrade
 sudo apt-get install libgearman-dev
 
 sudo apt-get upgrade
-```
-Step 3: Install Gearman (CLI, Client, Worker)
-```bash
+
 sudo pecl install gearman
 ```
 !You should add "extension=gearman.so" to php.ini
