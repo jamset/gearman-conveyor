@@ -7,9 +7,7 @@ sudo apt-get install php-pear php5-dev (PHP7: php-dev)
 ### Gearman
 
 ```bash
-sudo apt-get install gearman
-
-sudo apt-get install libgearman-dev
+sudo apt-get install gearman libgearman-dev
 
 sudo apt-get upgrade
 
