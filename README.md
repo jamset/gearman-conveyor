@@ -1,4 +1,6 @@
 # Gearman conveyor
+## Note: not maintained
+
 Distributed task queue with process&load management functions.
 
 Gearman (gearman.org) based module of distributed execution and control tasks allowing to handle tasks 
