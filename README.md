@@ -1,5 +1,4 @@
 # Gearman conveyor
-## Note: not maintained
 
 Distributed task queue with process&load management functions.
 
@@ -11,7 +10,7 @@ with help of [Process&Load Management](https://github.com/jamset/process-load-ma
 
 `composer require jamset/german-conveyor`
 
-Note: not tested on PHP7
+Note: not tested on PHP7 and not maintained.
 
 ##Description
 
