@@ -6,13 +6,13 @@ Gearman (gearman.org) based module of distributed execution and control tasks al
 with help of [Process&Load Management](https://github.com/jamset/process-load-manager) (Pm&Lm) and 
 [Tasks inspector](https://github.com/jamset/tasks-inspector) modules.
 
-##Install
+## Install
 
 `composer require jamset/german-conveyor`
 
 Note: not tested on PHP7 and not maintained.
 
-##Description
+## Description
 
 The architecture can be divided into three parts:
 
@@ -22,15 +22,15 @@ The architecture can be divided into three parts:
 
 3) Workers
 
-####The client part consists of:
+#### The client part consists of:
 1) Console command that starts client by CRON and that contain class extended BaseGearmanCLient. 
 Where parameters of Pm&Lm and worker's command name are set.
 
-####Server part:
+#### Server part:
 1) gearmand (Gearman job server)
 [Read how to install needed libs here](https://github.com/jamset/gearman-conveyor/blob/master/docs/environment.md)
 
-####Workers side:
+#### Workers side:
 
 1) Worker-manager. Worker that contains the process Manager (Pm&Lm) that performs task with addTaskHigh() level
 http://php.net/manual/en/gearmanclient.addtaskhigh.php
@@ -39,7 +39,7 @@ http://php.net/manual/en/gearmanclient.addtaskhigh.php
 http://php.net/manual/en/gearmanclient.addtask.php 
 http://php.net/manual/en/gearmanclient.addtasklow.php
 
-####Main logic (abstract)
+#### Main logic (abstract)
 
 CRON launch the client. Then in the client initializes the DTO, which set in the client tasks as tasks that 
 must be accepted by the Service (worker-performer) for the final run. 
@@ -87,13 +87,13 @@ If "PARALLEL", it will run whatever works the same client.
 I.e. when you want to delegate control on all tasks to one client you have to use default value. When you want to use
 multiple tasks (i.e. for long-term execution of complex work) you have to use PARALLEL option.
 
-###Features:
+### Features:
 
 - It allows to choose process management system and use Gearman callbacks to handle messages containing information
 about task's execution status and re-init tasks if needed, log or send information about execution by 
 [TasksInspector](https://github.com/jamset/tasks-inspector) module
 
-##Schema
+## Schema
 
 On the schema Gearman Conveyor module presents with [PublisherPulsar](https://github.com/jamset/publisher-pulsar) module
 
